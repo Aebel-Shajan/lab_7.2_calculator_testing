@@ -91,7 +91,29 @@ describe('multiply', () => {
 });
 
 describe('divide', () => {
+  test('can divide two small positive numbers', () => {
+    expected = 2/3;
+    actual = divide(2, 3);
+    expect(actual).toBe(expected);
+  });
 
+  test('can divide two large positive numbers', () => { 
+    expected = 200/3;
+    actual = divide(200e5, 3e5);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide two negative numbers', () => {
+    expected = 11/8;
+    actual = divide(-11, -8);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide zero', () => {
+    expected = NaN;
+    actual = divide(8, 0);
+    expect(actual).toBe(expected);
+  });
 });
 
 describe('modulus', () => {
