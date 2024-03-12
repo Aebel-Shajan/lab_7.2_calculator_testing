@@ -169,5 +169,27 @@ describe('even', () => {
 });
 
 describe('odd', () => {
+  test('can check if a small positive number is odd', () => {
+    expected = true;
+    actual = odd(2);
+    expect(actual).toBe(expected);
+  });
 
+  test('can check if a large positive numbers is odd', () => { 
+    expected = true;
+    actual = odd(200e5);
+    expect(actual).toBe(expected);
+  });
+
+  test('can check if a negative number is odd', () => {
+    expected = false;
+    actual = odd(-11);
+    expect(actual).toBe(expected);
+  });
+
+  test('can check if zero is odd', () => {
+    expected = true;
+    actual = odd(0);
+    expect(actual).toBe(expected);
+  });
 });
