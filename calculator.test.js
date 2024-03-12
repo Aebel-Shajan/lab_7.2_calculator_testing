@@ -143,7 +143,29 @@ describe('modulus', () => {
 });
 
 describe('even', () => {
+  test('can check if a small positive number is even', () => {
+    expected = true;
+    actual = even(2);
+    expect(actual).toBe(expected);
+  });
 
+  test('can check if a large positive numbers is even', () => { 
+    expected = true;
+    actual = even(200e5);
+    expect(actual).toBe(expected);
+  });
+
+  test('can check if a negative number is even', () => {
+    expected = false;
+    actual = even(-11);
+    expect(actual).toBe(expected);
+  });
+
+  test('can check if zero is even', () => {
+    expected = 0;
+    actual = even(0);
+    expect(actual).toBe(expected);
+  });
 });
 
 describe('odd', () => {
