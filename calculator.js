@@ -22,10 +22,12 @@ const modulus = function(a) {
 };
 
 const even = function(a) {
-    return a % 2 == 0; 
+    return modulus(a) % 2 === 0; 
 };
 
-const odd = null;
+const odd = function(a) {
+    return modulus(a) % 2 === 1;
+};
 
 module.exports = { 
     sum, 
