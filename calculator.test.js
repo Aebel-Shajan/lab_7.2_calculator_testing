@@ -162,7 +162,7 @@ describe('even', () => {
   });
 
   test('can check if zero is even', () => {
-    expected = 0;
+    expected = true;
     actual = even(0);
     expect(actual).toBe(expected);
   });
