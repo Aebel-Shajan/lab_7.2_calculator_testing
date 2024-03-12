@@ -45,7 +45,7 @@ describe('subtract', () => {
   });
 
   test('can subtract two large positive numbers', () => { 
-    expected = 117e5;
+    expected = 197e5;
     actual = subtract(200e5, 3e5);
     expect(actual).toBe(expected);
   });
