@@ -21,7 +21,9 @@ const modulus = function(a) {
     return Math.abs(a);
 };
 
-const even = null;
+const even = function(a) {
+    return a % 2 == 0; 
+};
 
 const odd = null;
 
